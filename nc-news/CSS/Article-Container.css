@@ -1,0 +1,54 @@
+/* Spinner Animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loading-spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+.loading-spinner {
+  animation: spin 1s linear infinite;
+  border: 16px solid white;
+  border-radius: 50%;
+  border-top: 16px solid blueviolet;
+  height: 30px;
+  width: 30px;
+}
+.article {
+  display: flex;
+  flex-direction: row;
+  background-color: whitesmoke;
+  justify-content: flex-start;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.article-image {
+  margin-right: 20px;
+  padding: 24px;
+  width: 300px;
+  height: auto;
+  border-radius: 30px;
+}
+.article-text {
+  display: flex;
+  flex-direction: column;
+}
+.article-title {
+  text-align: left;
+  margin-top: 20px;
+}
+.article-topic,
+.article-create-date,
+.article-comment-count,
+.article-author {
+  text-align: left;
+  margin-bottom: 0;
+}
