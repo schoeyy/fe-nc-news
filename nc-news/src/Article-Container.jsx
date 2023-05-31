@@ -39,24 +39,22 @@ const ArticleList = () => {
   return (
     <>
       {articles.map((article) => (
-        <div className="article" key={article.article_id}>
-          <img
-            className="article-image"
-            src={article.article_img_url}
-            alt={article.title}
-          />
-          <div className="article-text">
-            <h2 className="article-title">{article.title}</h2>
-            <p className="article-author">Author: {article.author}</p>
-            <p className="article-topic">Topic: {article.topic}</p>
-            <p className="article-create-date">
-              Created at: {new Date(article.created_at).toLocaleDateString()}
-            </p>
-            <p className="article-comment-count">
-              Comments: {article.comment_count}
-            </p>
+        <Link className="article-link" to={`/articles/${article.article_id}`} key={article.article_id}>
+          <div className="article">
+            <img
+              className="article-image"
+              src={article.article_img_url}
+              alt={article.title}
+            />
+            <div className="article-text">
+              <h2 className="article-title">{article.title}</h2>
+              <p className="article-author">Author: {article.author}</p>
+              <p className="article-topic">Topic: {article.topic}</p>
+              <p className="article-create-date">Created at: {new Date(article.created_at).toLocaleDateString()}</p>
+              <p className="article-comment-count">Comments: {article.comment_count}</p>
+            </div>
           </div>
-        </div>
+        </Link>
       ))}
     </>
   );
