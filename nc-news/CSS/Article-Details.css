@@ -58,31 +58,3 @@
 .details-created-at {
   margin: 5px;
 }
-
-/* @media (max-width: 425px) {
-  .details-image {
-    max-width: 300px;
-  }
-  .details-info {
-    margin-left: 0;
-    gap: 0;
-  }
-}
-@media (max-width: 375px) {
-  .details-image {
-    max-width: 250px;
-  }
-  .details-info {
-    margin-left: 0;
-    gap: 0;
-  }
-}
-@media (max-width: 320px) {
-  .details-image {
-    max-width: 200px;
-  }
-  .details-info {
-    margin-left: 0;
-    gap: 0;
-  }
-} */
