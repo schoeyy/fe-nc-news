@@ -59,8 +59,8 @@ const ArticleDetails = () => {
         />
         <p className="details-body">{article.body}</p>
       </div>
-      <ArticleComments id={id} />
       <Link to="/">Go back to articles</Link>
+      <ArticleComments id={id} />
     </div>
   );
 };
