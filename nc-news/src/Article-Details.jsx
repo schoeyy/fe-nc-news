@@ -90,21 +90,6 @@ const ArticleDetails = () => {
         />
         <p className="details-body">{article.body}</p>
       </div>
-      <form onSubmit={handleCommentSubmit}>
-        <input
-          type="text"
-          value={newComment}
-          onChange={handleCommentChange}
-          placeholder="Add a comment"
-        />
-        <button type="submit">Submit</button>
-      </form>
-      {comments.map((comment) => (
-        <div key={comment.id}>
-          <p>{comment.text}</p>
-          <p>By: {comment.author}</p>
-        </div>
-      ))}
       <Link to="/">Go back to articles</Link>
     </div>
   );
