@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
+import ArticleComments from "./Article-Comments";
 import "../CSS/Article-Details.css";
 
 const ArticleDetails = () => {
   const [article, setArticle] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
-  const [comments, setComments] = useState([]);
-  const [newComment, setNewComment] = useState("");
 
   let { id } = useParams();
 
@@ -29,36 +28,6 @@ const ArticleDetails = () => {
 
     fetchArticle();
   }, [id]);
-
-//   useEffect(() => {
-//     const fetchComments = async () => {
-//       try {
-//         const response = await fetch(
-//           `${import.meta.env.VITE_API_URL}/api/articles/${id}/comments`
-//         );
-//         const data = await response.json();
-
-//         setComments(data.comments);
-//         setIsLoading(false);
-//       } catch (error) {
-//         console.error("Error:", error);
-//         setErrorMessage(error);
-//       }
-//     };
-
-//     fetchComments();
-//   }, [id]);
-
-  const handleCommentChange = (event) => {
-    setNewComment(event.target.value);
-  };
-
-  const handleCommentSubmit = (event) => {
-    event.preventDefault();
-    // finish add comment function
-
-    setNewComment("");
-  };
 
   if (isLoading) {
     return (
@@ -90,6 +59,7 @@ const ArticleDetails = () => {
         />
         <p className="details-body">{article.body}</p>
       </div>
+      <ArticleComments id={id} />
       <Link to="/">Go back to articles</Link>
     </div>
   );
