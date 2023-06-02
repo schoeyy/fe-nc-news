@@ -47,3 +47,20 @@
     gap: 0;
   }
 }
+.add-comment textarea {
+  width: 80%;
+  height: 80px;
+  margin: 20px;
+  vertical-align: top;
+}
+.add-comment button {
+  background-color: blueviolet;
+  opacity: 0.7;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: opacity 0.5s;
+  margin: 20px;
+}

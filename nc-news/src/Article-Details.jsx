@@ -3,7 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import ArticleComments from "./Article-Comments";
 import "../CSS/Article-Details.css";
 
-const ArticleDetails = () => {
+const ArticleDetails = (username) => {
   const [article, setArticle] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
@@ -60,7 +60,7 @@ const ArticleDetails = () => {
         <p className="details-body">{article.body}</p>
       </div>
       <Link to="/">Go back to articles</Link>
-      <ArticleComments id={id} />
+      <ArticleComments id={id} username={username} />
     </div>
   );
 };
