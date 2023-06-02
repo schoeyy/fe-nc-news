@@ -67,7 +67,7 @@ const ArticleComments = ({ id, username }) => {
 
       const data = await response.json();
 
-      setComments((prevComments) => [...prevComments, data.comment]);
+      fetchComments();
       setNewComment("");
     } catch (error) {
       console.error(error);
